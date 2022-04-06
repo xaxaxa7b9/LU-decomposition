@@ -46,8 +46,25 @@ void LU(double A[][MAX], int n)
                     = (A[k][i] - sum) / U[i][i];
             }
         }
-    }
+       cout << setw(6)
+         << "      L"
+         << setw(32)
+         << "U" << endl;
  
+   
+    for (int i = 0; i < n; i++)
+    {
+       
+        for (int j = 0; j < n; j++)
+            cout << setw(6) << L[i][j] << "\t";
+        cout << "\t";
+ 
+    
+        for (int j = 0; j < n; j++)
+            cout << setw(6) << U[i][j] << "\t";
+        cout << endl;
+    }
+}
    
 
 
